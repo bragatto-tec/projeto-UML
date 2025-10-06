@@ -1,6 +1,6 @@
 ```mermaid
 graph LR
-    %% Atores
+    %% Atores (um por linha)
     actor Cliente
     actor Restaurante
 
@@ -40,4 +40,3 @@ graph LR
     UC05 -.-> |"<<include>>"| UC11
     UC02 -.-> |"<<include>>"| UC10
     UC07 -.-> |"<<include>>"| UC11
-```
