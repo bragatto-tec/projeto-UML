@@ -1,6 +1,5 @@
 ```mermaid
 
-```mermaid
 graph LR;
     %% Atores
     actor Cliente;
