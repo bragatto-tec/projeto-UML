@@ -1,6 +1,6 @@
 ```mermaid
 graph LR
-    %% Atores (um por linha)
+    %% Atores 
     actor Cliente
     actor Restaurante
 
