@@ -1,10 +1,7 @@
-# DTE 01 - Ciclo de Vida da Reserva
-```mermaid
 @startuml
 title Diagrama de Transição de Estado - Reserva (Entidade)
 
 [*] -down-> Pendente : Cliente faz reserva (UC04)
-
 Pendente -right-> Confirmada : Restaurante aceita (UC08)
 Pendente -down-> Recusada : Restaurante recusa (UC08)
 Pendente -down-> Cancelada : Cliente cancela (UC05)
@@ -18,4 +15,3 @@ Cancelada -down-> [*] : Fim (Histórico)
 Concluída -down-> [*] : Fim (Histórico)
 
 @enduml
-```
