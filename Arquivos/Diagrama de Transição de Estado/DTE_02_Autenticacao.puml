@@ -1,0 +1,22 @@
+# DTE 02 - Estado de Autenticação do Usuário
+@startuml
+title Diagrama de Transição de Estado - Autenticação (Usuário)
+
+[*] -down-> NaoAutenticado
+
+NaoAutenticado -right-> Autenticando : Insere credenciais (UC02)
+
+Autenticando -down-> Autenticado : Credenciais válidas
+Autenticando -left-> NaoAutenticado : Credenciais inválidas
+
+Autenticado -right-> Inativo : Sem atividade
+Inativo -left-> Autenticado : Usuário interage
+
+Autenticado -down-> SessaoExpirada : Tempo máximo atingido
+Inativo -down-> SessaoExpirada : Tempo máximo atingido
+
+SessaoExpirada -down-> [*] : Fim
+Autenticado -left-> [*] : Usuário faz logout
+
+@enduml
+
