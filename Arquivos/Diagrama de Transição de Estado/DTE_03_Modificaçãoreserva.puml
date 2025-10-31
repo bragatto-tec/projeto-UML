@@ -1,0 +1,17 @@
+# DTE 03 - Solicitação de Modificação de Reserva
+@startuml
+title Diagrama de Transição de Estado - Modificação de Reserva
+
+[*] -down-> Solicitada : Cliente solicita alteração (UC05)
+
+Solicitada -right-> EmAnalise : Sistema verifica disponibilidade
+
+EmAnalise -down-> Aprovada : Nova data/hora disponível
+EmAnalise -right-> Rejeitada : Indisponível
+
+Aprovada -down-> Concluida : Reserva modificada 
+
+Rejeitada -down-> [*] : Fim
+Concluida -down-> [*] : Fim
+
+@enduml
